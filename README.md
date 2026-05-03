@@ -1,20 +1,31 @@
 Linux Service Monitoring Script
 
-This is a simple Bash script that checks the status of services.
+Description
+
+This Bash script checks whether services are running on a Linux system.
 
 Features
 
 * Checks multiple services
 * Uses loops, functions, and conditions
-* Beginner-friendly DevOps script
+* Real process checking using `pgrep`
 
-Technologies
+Example Output
 
-* Bash
-* Linux
+Checking nginx...
+Service nginx is running
 
-How to run
+Checking redis...
+Service redis is not running
+
+Skills Demonstrated
+
+* Bash scripting
+* Linux process management
+* Automation logic
+* Git & GitHub
+
+How to Run
 
 chmod +x monitor.sh
 ./monitor.sh
-

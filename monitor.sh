@@ -1,17 +1,17 @@
 #!/bin/bash
 
 check_service() {
-	if [ $1 = "nginx" ] || [ $1 = "apache" ] || [ $1 = "mysql" ]
-	then
-		echo "Service $1 is active"
-	else 
-		echo "Service $1 not found"
-	fi
+    if pgrep -x "$1" > /dev/null
+    then
+        echo "Service $1 is running"
+    else
+        echo "Service $1 is not running"
+    fi
 }
 
 for service in nginx apache mysql redis
 do
-	echo "Checking $service.."
-	check_service $service
-	echo ""
+    echo "------------------------"
+    echo "Checking $service..."
+    check_service "$service"
 done
