@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Starting Service Monitor..."
 check_service() {
     if pgrep -x "$1" > /dev/null
     then
