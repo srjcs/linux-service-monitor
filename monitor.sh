@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p logs
+
 LOG_FILE="logs/service-monitor.log"
 
 echo "=================================" | tee -a "$LOG_FILE"
